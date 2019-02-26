@@ -1,0 +1,62 @@
+<template name="8c6bc9d0">
+  <view class="_view data-v-be8c2c32 body">
+    <view class="_view data-v-be8c2c32 scan">{{code}}</view>
+    <view class="_view data-v-be8c2c32 uni-list-cell">
+      <view class="_view data-v-be8c2c32">Box Scan</view>
+      <switch checked="{{showbox}}" bindchange="handleProxy" data-eventid="{{'UrL-0'}}" data-comkey="{{$k}}" class="_switch data-v-be8c2c32" />
+    </view>
+    <view class="_view data-v-be8c2c32 uni-list-cell">
+      <view class="_view data-v-be8c2c32">Auto Total</view>
+      <switch checked="{{auto}}" bindchange="handleProxy" data-eventid="{{'gHZ-1'}}" data-comkey="{{$k}}" class="_switch data-v-be8c2c32" />
+    </view>
+    <view class="_view data-v-be8c2c32 result" hidden="{{!(showgoods)}}">
+      <text class="_text data-v-be8c2c32 title">Goods Info：</text>
+      <view class="_view data-v-be8c2c32 nav-right-item">
+        <text class="_text data-v-be8c2c32 first">SKU:</text>
+        <text class="_text data-v-be8c2c32">{{good.sku}}</text>
+      </view>
+      <view class="_view data-v-be8c2c32 nav-right-item">
+        <text class="_text data-v-be8c2c32 first">Des:</text>
+        <text class="_text data-v-be8c2c32">{{good.description}}</text>
+      </view>
+      <view class="_view data-v-be8c2c32 nav-right-item">
+        <text class="_text data-v-be8c2c32 first">Asin:</text>
+        <text class="_text data-v-be8c2c32">{{good.asin}}</text>
+      </view>
+      <view class="_view data-v-be8c2c32 nav-right-item">
+        <text class="_text data-v-be8c2c32 first">Size:</text>
+        <text class="_text data-v-be8c2c32">{{good.size}}</text>
+      </view>
+      <view class="_view data-v-be8c2c32 nav-right-item">
+        <text class="_text data-v-be8c2c32 first">Qty:</text>
+        <text class="_text data-v-be8c2c32">{{good.qty}}</text>
+      </view>
+      <view class="_view data-v-be8c2c32 nav-right-item">
+        <text class="_text data-v-be8c2c32 first">Boxs:</text>
+        <text class="_text data-v-be8c2c32">{{good.box_count}}</text>
+      </view>
+      <view class="_view data-v-be8c2c32 nav-right-item">
+        <text class="_text data-v-be8c2c32 first">BoxNo:</text>
+        <text class="_text data-v-be8c2c32">#{{good.boxno}}</text>
+      </view>
+    </view>
+    <view class="_view data-v-be8c2c32 result" hidden="{{!(showbox)}}">
+      <text class="_text data-v-be8c2c32 title">Box Info:</text>
+      <view class="_view data-v-be8c2c32 nav-right-item">
+        <text class="_text data-v-be8c2c32 first">SKU:</text>
+        <text class="_text data-v-be8c2c32">{{box.siglesku}}</text>
+      </view>
+      <view class="_view data-v-be8c2c32 nav-right-item">
+        <text class="_text data-v-be8c2c32 first">BoxNo:</text>
+        <text class="_text data-v-be8c2c32">#{{box.boxno}}</text>
+      </view>
+      <view class="_view data-v-be8c2c32 nav-right-item">
+        <text class="_text data-v-be8c2c32 first">Qty:</text>
+        <text class="_text data-v-be8c2c32">{{box.qty}}</text>
+      </view>
+    </view>
+    <button type="primary" bindtap="handleProxy" data-eventid="{{'JrR-2'}}" data-comkey="{{$k}}" class="_button data-v-be8c2c32">扫码</button>
+    <view style="height: 120rpx;" class="_view data-v-be8c2c32"></view>
+    <button type="primary" hidden="{{!(!auto)}}" bindtap="handleProxy" data-eventid="{{'iVJ-3'}}" data-comkey="{{$k}}" class="_button data-v-be8c2c32">通过</button>
+  </view>
+</template>

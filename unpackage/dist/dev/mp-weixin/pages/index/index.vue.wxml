@@ -1,0 +1,67 @@
+<template name="ee8a0da8">
+  <view class="_view data-v-6faac7fb body">
+    <scroll-view class="_scroll-view data-v-6faac7fb nav-left" scroll-y style=" {{'height:' + height + 'px'}}">
+      <view class="_view data-v-6faac7fb nav-left-item {{index == categoryActive ? 'active' : ''}}" bindtap="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'jfk-0-'+index}}" data-comkey="{{$k}}" wx:for="{{goods}}" wx:for-index="index" wx:for-item="item">
+      #{{item.boxno}}~{{item.sku}} </view>
+    </scroll-view>
+    <scroll-view class="_scroll-view data-v-6faac7fb nav-right" scroll-y scroll-top="{{scrollTop}}" bindscroll="handleProxy" data-eventid="{{'8C3-3'}}" data-comkey="{{$k}}" style=" {{'height:' + height + 'px'}}">
+      <view class="_view data-v-6faac7fb nav-right-item">
+        <text class="_text data-v-6faac7fb first">SKU:</text>
+        <text class="_text data-v-6faac7fb">{{good.sku}}</text>
+      </view>
+      <view class="_view data-v-6faac7fb nav-right-item">
+        <text class="_text data-v-6faac7fb first">Des:</text>
+        <text class="_text data-v-6faac7fb">{{good.description}}</text>
+      </view>
+      <view class="_view data-v-6faac7fb nav-right-item">
+        <text class="_text data-v-6faac7fb first">Asin:</text>
+        <text class="_text data-v-6faac7fb">{{good.asin}}</text>
+      </view>
+      <view class="_view data-v-6faac7fb nav-right-item">
+        <text class="_text data-v-6faac7fb first">Size:</text>
+        <text class="_text data-v-6faac7fb">{{good.size}}</text>
+      </view>
+      <view class="_view data-v-6faac7fb nav-right-item">
+        <text class="_text data-v-6faac7fb first">BoxNo:</text>
+        <text class="_text data-v-6faac7fb">#{{good.boxno}}</text>
+      </view>
+      <view class="_view data-v-6faac7fb nav-right-item">
+        <text class="_text data-v-6faac7fb first">Qty:</text>
+        <text class="_text data-v-6faac7fb">{{good.qty}}</text>
+      </view>
+      <view class="_view data-v-6faac7fb nav-right-item">
+        <text class="_text data-v-6faac7fb first">QtyCheck:</text>
+        <text class="_text data-v-6faac7fb red">{{good.qty_check}}</text>
+      </view>
+      <view class="_view data-v-6faac7fb nav-right-item">
+        <text class="_text data-v-6faac7fb first">Boxs:</text>
+        <text class="_text data-v-6faac7fb">{{good.box_count}}</text>
+      </view>
+      <view class="_view data-v-6faac7fb nav-right-item">
+        <text class="_text data-v-6faac7fb first">BoxCheck:</text>
+        <text class="_text data-v-6faac7fb red">{{good.box_count_check}}</text>
+      </view>
+      <view class="_view data-v-6faac7fb nav-right-item">
+        <text class="_text data-v-6faac7fb first">Info:</text>
+        <textarea value="{{good.info}}" bindinput="handleProxy" bindblur="handleProxy" bindconfirm="handleProxy" data-eventid="{{'Urd-1'}}" data-comkey="{{$k}}" class="_textarea data-v-6faac7fb" />
+      </view>
+      <view class="_view data-v-6faac7fb box-item">
+        <view class="_view data-v-6faac7fb title">Asin-BoxNo-Qty</view>
+        <view class="_view data-v-6faac7fb uni-list">
+          <view class="_view data-v-6faac7fb uni-list-cell" wx:key="indexb" key="{{indexb}}" wx:for="{{boxs}}" wx:for-index="indexb" wx:for-item="box">
+            <view class="_view data-v-6faac7fb left">
+              <text class="_text data-v-6faac7fb">{{box.asin}}</text>
+              <text class="_text data-v-6faac7fb">SKU: {{box.siglesku}}</text>
+              <view class="_view data-v-6faac7fb box">
+                <text class="_text data-v-6faac7fb">BoxNo: #{{box.boxno}}</text>
+                <text class="_text data-v-6faac7fb">Qty: {{box.qty}}</text>
+              </view>
+            </view>
+            <switch id="{{indexb}}" checked="{{box.checked}}" disabled="{{box.checked}}" bindchange="handleProxy" data-eventid="{{'xp5-2-'+indexb}}" data-comkey="{{$k}}" class="_switch data-v-6faac7fb" />
+          </view>
+        </view>
+      </view>
+      <view style="height: 50rpx;" class="_view data-v-6faac7fb">.......</view>
+    </scroll-view>
+  </view>
+</template>
